@@ -1,0 +1,41 @@
+;@import 'libs/bootstrap-reboot.min';
+@import 'libs/font';
+
+
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
+.star {
+    color: #dcdcdc;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    line-height: 7px;
+    &:hover {
+        color: #FAC412;
+    }
+}
+.star:hover ~ .star {
+    color: #FAC412;
+}
+.rating[data-total-value="1"] .star:nth-child(n + 5),
+.rating[data-total-value="2"] .star:nth-child(n + 4),
+.rating[data-total-value="3"] .star:nth-child(n + 3),
+.rating[data-total-value="4"] .star:nth-child(n + 2),
+.rating[data-total-value="5"] .star:nth-child(n + 1) {
+    color: #FAC412;
+}
+
+
+
+@import 'blocks/header/header';
+@import 'blocks/promo/promo';
+@import 'blocks/category/category';
